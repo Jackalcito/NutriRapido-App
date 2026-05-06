@@ -1,0 +1,31 @@
+id_ingrediente,nombre,categoria,calorias_100g,proteinas_100g,carbohidratos_100g,grasas_100g,fibra_100g,precio_soles_kg,unidad
+1,Arroz blanco,Cereales,130,2.7,28.2,0.3,0.3,3.50,kg
+2,Fideos spaghetti,Cereales,371,13.0,74.7,1.8,2.5,4.00,kg
+3,Pan francés,Panadería,270,9.2,53.4,1.5,2.1,0.30,unidad
+4,Avena,Cereales,389,17.0,66.3,6.9,10.6,5.00,kg
+5,Papa blanca,Tubérculos,82,1.9,18.5,0.1,1.5,2.00,kg
+6,Papa amarilla,Tubérculos,95,2.1,21.5,0.1,1.8,3.00,kg
+7,Camote,Tubérculos,105,1.4,24.3,0.1,2.5,2.50,kg
+8,Yuca,Tubérculos,150,0.9,36.0,0.1,1.5,2.00,kg
+9,Pechuga de pollo,Carnes,165,31.0,0.0,3.6,0.0,12.00,kg
+10,Muslo de pollo,Carnes,209,18.0,0.0,15.0,0.0,9.00,kg
+11,Carne de res,Carnes,215,26.3,1.5,11.2,0.0,22.00,kg
+12,Atún en lata,Carnes,116,25.5,0.0,1.0,0.0,5.00,lata
+13,Huevo,Huevos,155,12.6,1.1,10.6,0.0,0.50,unidad
+14,Leche entera,Lácteos,61,3.2,4.7,3.2,0.0,4.50,litro
+15,Queso fresco,Lácteos,245,17.5,2.1,18.8,0.0,12.00,kg
+16,Yogur natural,Lácteos,75,4.1,9.8,1.5,0.0,3.50,litro
+17,Lechuga,Verduras,17,1.3,2.9,0.2,1.8,2.00,kg
+18,Tomate,Verduras,21,0.9,4.5,0.2,1.2,3.00,kg
+19,Zanahoria,Verduras,41,0.9,9.6,0.2,2.8,2.00,kg
+20,Cebolla,Verduras,40,1.1,9.3,0.1,1.7,2.00,kg
+21,Pepino,Verduras,16,0.7,3.6,0.1,0.5,2.50,kg
+22,Espinaca,Verduras,23,2.9,3.6,0.4,2.2,3.00,kg
+23,Palta,Frutas,160,2.0,8.5,14.7,6.7,5.00,kg
+24,Plátano,Frutas,89,1.1,22.8,0.3,2.6,2.00,kg
+25,Naranja,Frutas,47,0.9,11.2,0.1,2.4,2.50,kg
+26,Manzana,Frutas,52,0.3,13.8,0.2,2.4,4.00,kg
+27,Frejoles canarios,Leguminosas,128,8.5,23.1,0.4,5.8,6.00,kg
+28,Lentejas,Leguminosas,116,9.0,20.1,0.4,7.9,5.50,kg
+29,Aceite vegetal,Grasas,884,0.0,0.0,100.0,0.0,8.00,litro
+30,Mantequilla,Grasas,717,0.9,0.1,81.1,0.0,12.00,kg

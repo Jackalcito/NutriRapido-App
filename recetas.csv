@@ -1,0 +1,16 @@
+id_receta,nombre,categoria,tiempo_min,metodo_coccion,porciones,dificultad,descripcion
+1,Arroz con huevo frito,Almuerzo,15,Freír,2,Fácil,Arroz cocido con huevo frito encima. Clásico del estudiante.
+2,Fideos con atún,Almuerzo,20,Sancochar,2,Fácil,Fideos sancochados mezclados con atún en lata y cebolla.
+3,Papa sancochada con huevo,Almuerzo,25,Sancochar,2,Fácil,Papas sancochadas acompañadas de huevo duro y ensalada.
+4,Pollo sancochado con arroz,Almuerzo,30,Sancochar,3,Fácil,Pechuga de pollo sancochada con arroz blanco y ensalada.
+5,Pollo al horno con papa,Almuerzo,45,Hornear,3,Medio,Muslo de pollo horneado con papas y condimentos.
+6,Ensalada completa,Ensalada,10,Sin cocción,2,Fácil,Lechuga tomate zanahoria pepino y palta con limón.
+7,Avena con plátano,Desayuno,10,Sancochar,1,Fácil,Avena cocida con plátano en rodajas y miel.
+8,Huevos revueltos con pan,Desayuno,10,Freír,1,Fácil,Huevos revueltos con pan francés tostado.
+9,Arroz con pollo batch,Almuerzo,40,Sancochar,4,Medio,Arroz con pollo cocinado para 3 días. Económico y nutritivo.
+10,Fideos rojos con carne,Almuerzo,35,Freír,3,Medio,Fideos con salsa de tomate y carne molida.
+11,Lentejas guisadas,Almuerzo,30,Sancochar,3,Fácil,Lentejas con zanahoria y cebolla. Alta en proteínas.
+12,Frejoles con arroz,Almuerzo,35,Sancochar,3,Fácil,Frejoles canarios guisados con arroz. Proteína vegetal.
+13,Camote sancochado,Snack,20,Sancochar,2,Fácil,Camote sancochado como snack saludable entre comidas.
+14,Yogur con frutas,Desayuno,5,Sin cocción,1,Fácil,Yogur natural con plátano y manzana en trozos.
+15,Pollo batch para semana,Almuerzo,35,Sancochar,5,Fácil,Pollo sancochado en cantidad para usar toda la semana.

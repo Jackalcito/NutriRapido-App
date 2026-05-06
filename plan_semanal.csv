@@ -1,0 +1,16 @@
+id_plan,id_usuario,dia,tiempo_comida,id_receta
+1,1,Lunes,Desayuno,8
+2,1,Lunes,Almuerzo,4
+3,1,Lunes,Cena,2
+4,1,Martes,Desayuno,7
+5,1,Martes,Almuerzo,4
+6,1,Martes,Cena,3
+7,1,Miércoles,Desayuno,8
+8,1,Miércoles,Almuerzo,9
+9,1,Miércoles,Cena,6
+10,1,Jueves,Desayuno,14
+11,1,Jueves,Almuerzo,9
+12,1,Jueves,Cena,2
+13,1,Viernes,Desayuno,7
+14,1,Viernes,Almuerzo,11
+15,1,Viernes,Cena,6

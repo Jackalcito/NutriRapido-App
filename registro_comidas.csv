@@ -1,0 +1,7 @@
+id_registro,id_usuario,fecha,tiempo_comida,id_receta,porciones,calorias_consumidas
+1,1,2026-04-28,Desayuno,8,1,196
+2,1,2026-04-28,Almuerzo,4,1,385
+3,1,2026-04-28,Cena,2,1,290
+4,1,2026-04-29,Desayuno,7,1,178
+5,1,2026-04-29,Almuerzo,9,1,420
+6,1,2026-04-29,Cena,6,1,95
