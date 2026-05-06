@@ -1,0 +1,241 @@
+/* ============================================
+   NUTRIRÁPIDO - Modo oscuro minimalista
+   Carpeta: D:/NutriRapido/www/style.css
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+/* BASE */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0A0E1A !important;
+  color: #E2E8F0 !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* FONDO DE LA APP */
+.container-fluid {
+  background: #0A0E1A !important;
+  padding: 2rem !important;
+}
+
+/* TÍTULO */
+h2 {
+  color: #F8FAFC !important;
+  font-weight: 700 !important;
+  font-size: 1.6rem !important;
+  letter-spacing: -0.5px !important;
+}
+h5 {
+  color: #94A3B8 !important;
+  font-weight: 400 !important;
+  font-size: 0.85rem !important;
+}
+
+/* LÍNEA DIVISORIA */
+hr {
+  border-color: rgba(255,255,255,0.06) !important;
+  margin: 1.2rem 0 !important;
+}
+
+/* TARJETAS DE RESUMEN */
+.col-sm-2 > div {
+  border-radius: 10px !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  padding: 1.2rem !important;
+  transition: transform 0.2s, border-color 0.2s !important;
+}
+.col-sm-2 > div:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(255,255,255,0.15) !important;
+}
+.col-sm-2 h5 {
+  font-size: 11px !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,0.5) !important;
+  font-weight: 500 !important;
+}
+.col-sm-2 h3 {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  color: white !important;
+  margin: 4px 0 !important;
+}
+.col-sm-2 p {
+  font-size: 11px !important;
+  color: rgba(255,255,255,0.4) !important;
+  margin: 0 !important;
+}
+
+/* PESTAÑAS */
+.nav-tabs {
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  background: transparent !important;
+}
+.nav-tabs > li > a {
+  color: #94A3B8 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 10px 16px !important;
+  transition: color 0.2s !important;
+}
+.nav-tabs > li > a:hover {
+  color: #F8FAFC !important;
+  background: rgba(255,255,255,0.04) !important;
+  border: none !important;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  color: #F8FAFC !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid #6366F1 !important;
+}
+.tab-content {
+  background: transparent !important;
+  padding-top: 1.5rem !important;
+}
+
+/* HEADINGS */
+h4 {
+  color: #F8FAFC !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* INPUTS */
+.form-control, select.form-control, input.form-control {
+  background: #141824 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  color: #E2E8F0 !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  padding: 8px 12px !important;
+  transition: border-color 0.2s !important;
+}
+.form-control:focus {
+  border-color: #6366F1 !important;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15) !important;
+  outline: none !important;
+}
+.form-group label {
+  color: #94A3B8 !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 6px !important;
+}
+
+/* SLIDER */
+.irs--shiny .irs-bar {
+  background: #6366F1 !important;
+  border-top-color: #6366F1 !important;
+  border-bottom-color: #6366F1 !important;
+}
+.irs--shiny .irs-handle {
+  background: #6366F1 !important;
+  border-color: #6366F1 !important;
+}
+.irs--shiny .irs-single {
+  background: #6366F1 !important;
+}
+.irs--shiny .irs-line {
+  background: rgba(255,255,255,0.08) !important;
+}
+
+/* BOTONES */
+.btn, button {
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 10px 18px !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: opacity 0.2s, transform 0.15s !important;
+}
+.btn:hover, button:hover {
+  opacity: 0.88 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* TABLAS */
+table {
+  background: #141824 !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  border-collapse: collapse !important;
+  font-size: 13px !important;
+}
+table thead tr {
+  background: #1E2535 !important;
+}
+table thead th {
+  color: #94A3B8 !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  padding: 12px 16px !important;
+  border: none !important;
+}
+table tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+  transition: background 0.15s !important;
+}
+table tbody tr:hover {
+  background: rgba(99,102,241,0.06) !important;
+}
+table tbody td {
+  color: #CBD5E1 !important;
+  padding: 11px 16px !important;
+  border: none !important;
+}
+table tbody tr:last-child {
+  border-bottom: none !important;
+}
+
+/* TARJETAS DE TOTALES */
+.col-sm-3 > div, .col-sm-2 > div {
+  border-radius: 10px !important;
+}
+
+/* VERBATIM OUTPUT */
+pre {
+  background: #141824 !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  border-radius: 10px !important;
+  color: #94A3B8 !important;
+  font-family: 'DM Mono', monospace !important;
+  font-size: 12.5px !important;
+  padding: 1.2rem 1.5rem !important;
+  line-height: 1.7 !important;
+}
+
+/* PLOTS */
+.shiny-plot-output {
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  background: #141824 !important;
+  padding: 1rem !important;
+}
+
+/* FOOTER */
+.container-fluid > hr + p {
+  color: #334155 !important;
+  font-size: 11px !important;
+  padding-top: 0.5rem !important;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0A0E1A; }
+::-webkit-scrollbar-thumb { background: #1E2535; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2D3748; }
