@@ -102,6 +102,9 @@ setwd("D:/NutriRapido")
 
 # 3. Ejecutar la app
 shiny::runApp("app.R")
+
+## 🌐 App en línea
+Accede sin instalar nada: https://jackalcitouwu.shinyapps.io/nutrirapido/
 ```
 
 ---
