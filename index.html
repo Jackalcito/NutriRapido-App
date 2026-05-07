@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriRápido — Alimentación saludable para estudiantes de Ica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --indigo: #6366F1; --indigo-dark: #4F46E5;
+      --dark: #0A0E1A; --darker: #060912;
+      --card: #141824; --border: rgba(255,255,255,0.06);
+      --text: #E2E8F0; --muted: #94A3B8;
+      --sans: 'Inter', sans-serif; --mono: 'DM Mono', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--darker); color: var(--text); line-height: 1.6; }
+
+    /* NAV */
+    nav { display:flex; justify-content:space-between; align-items:center; padding:1.5rem 3rem;
+      border-bottom:1px solid var(--border); position:sticky; top:0; background:rgba(6,9,18,0.9);
+      backdrop-filter:blur(12px); z-index:100; }
+    .nav-logo { font-family:var(--mono); font-size:14px; color:var(--indigo); letter-spacing:2px; }
+    .nav-links { display:flex; gap:2rem; }
+    .nav-links a { color:var(--muted); text-decoration:none; font-size:13px; font-weight:500; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--text); }
+
+    /* HERO */
+    .hero { min-height:100vh; display:flex; flex-direction:column; justify-content:center;
+      padding:4rem 3rem; position:relative; overflow:hidden; }
+    .hero-bg { position:absolute; inset:0;
+      background:radial-gradient(ellipse at 30% 50%, rgba(99,102,241,0.12) 0%, transparent 60%),
+                 radial-gradient(ellipse at 80% 20%, rgba(124,58,237,0.08) 0%, transparent 50%);
+      pointer-events:none; }
+    .grid { position:absolute; inset:0;
+      background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                       linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size:40px 40px; }
+    .hero-content { max-width:800px; position:relative; z-index:2; animation:fadeUp 0.8s ease both; }
+    .tag { display:inline-block; font-family:var(--mono); font-size:11px; color:var(--indigo);
+      border:1px solid var(--indigo); padding:4px 12px; border-radius:2px;
+      margin-bottom:1.5rem; letter-spacing:2px; }
+    .hero h1 { font-size:clamp(2.5rem,6vw,4rem); font-weight:700; line-height:1.1;
+      margin-bottom:1.5rem; }
+    .accent { color:var(--indigo); }
+    .hero-sub { font-size:1.1rem; color:var(--muted); max-width:560px; margin-bottom:2.5rem; }
+    .btns { display:flex; gap:1rem; flex-wrap:wrap; }
+    .btn-p { background:var(--indigo); color:white; padding:12px 28px; border-radius:6px;
+      text-decoration:none; font-weight:600; font-size:14px; transition:all 0.2s; }
+    .btn-p:hover { background:var(--indigo-dark); transform:translateY(-2px); }
+    .btn-s { background:transparent; color:var(--text); padding:12px 28px; border-radius:6px;
+      border:1px solid var(--border); text-decoration:none; font-size:14px; transition:all 0.2s; }
+    .btn-s:hover { border-color:var(--text); transform:translateY(-2px); }
+
+    /* STATS */
+    .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+      background:var(--border); border-top:1px solid var(--border); margin-top:auto; }
+    .stat { padding:2rem; background:var(--darker); }
+    .stat:hover { background:rgba(99,102,241,0.06); }
+    .stat-n { font-size:2.2rem; font-weight:700; color:var(--indigo); font-family:var(--mono); }
+    .stat-l { font-size:12px; color:var(--muted); margin-top:4px; line-height:1.4; }
+
+    /* SECTIONS */
+    section { padding:5rem 3rem; }
+    .container { max-width:1100px; margin:0 auto; }
+    .s-tag { font-family:var(--mono); font-size:11px; color:var(--indigo);
+      letter-spacing:3px; text-transform:uppercase; margin-bottom:1rem; }
+    h2 { font-size:clamp(1.8rem,4vw,2.8rem); font-weight:700; margin-bottom:1rem; }
+    .s-sub { color:var(--muted); font-size:1rem; max-width:580px; margin-bottom:3rem; }
+
+    /* FEATURES */
+    .features { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    .feature { background:var(--card); border:1px solid var(--border); border-radius:12px;
+      padding:2rem; transition:all 0.3s; }
+    .feature:hover { border-color:var(--indigo); transform:translateY(-4px); }
+    .feat-icon { font-size:2rem; margin-bottom:1rem; }
+    .feature h3 { font-size:1rem; font-weight:600; margin-bottom:0.5rem; }
+    .feature p { font-size:13px; color:var(--muted); }
+
+    /* TECH */
+    .tech-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:1rem; margin-top:2rem; }
+    .tech { background:var(--card); border:1px solid var(--border); border-radius:10px;
+      padding:1.5rem 1rem; text-align:center; transition:all 0.2s; }
+    .tech:hover { border-color:var(--indigo); transform:translateY(-3px); }
+    .tech-i { font-size:1.8rem; margin-bottom:8px; }
+    .tech-n { font-size:13px; font-weight:600; }
+    .tech-d { font-size:11px; color:var(--muted); margin-top:4px; }
+
+    /* TEAM */
+    .team { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; margin-top:2rem; }
+    .member { background:var(--card); border:1px solid var(--border); border-radius:12px;
+      padding:2rem; text-align:center; transition:all 0.3s; }
+    .member:hover { border-color:var(--indigo); transform:translateY(-4px); }
+    .avatar { width:52px; height:52px; background:var(--indigo-dark); border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      font-weight:700; font-size:15px; margin:0 auto 1rem; }
+    .member h4 { font-size:14px; font-weight:600; margin-bottom:6px; }
+    .member p { font-size:12px; color:var(--muted); line-height:1.5; }
+
+    /* FOOTER */
+    footer { background:var(--darker); border-top:1px solid var(--border);
+      padding:2.5rem 3rem; text-align:center; }
+    footer p { font-size:12px; color:#334155; margin-bottom:4px; }
+    footer a { color:var(--indigo); text-decoration:none; }
+
+    @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+    @media(max-width:768px) {
+      nav { padding:1rem 1.5rem; } .nav-links { display:none; }
+      .hero { padding:2rem 1.5rem; } .stats { grid-template-columns:repeat(2,1fr); }
+      .features { grid-template-columns:1fr; } .tech-grid { grid-template-columns:repeat(3,1fr); }
+      .team { grid-template-columns:repeat(2,1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">NUTRIRÁPIDO</span>
+  <div class="nav-links">
+    <a href="#funciones">Funciones</a>
+    <a href="#tech">Tecnologías</a>
+    <a href="#equipo">Equipo</a>
+    <a href="https://github.com/Jackalcito" target="_blank">GitHub</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"><div class="grid"></div></div>
+  <div class="hero-content">
+    <div class="tag">Proyecto Final · IV Semestre · UNICA 2026</div>
+    <h1>Come sano.<br><span class="accent">Sin perder tiempo.</span><br>Sin gastar de más.</h1>
+    <p class="hero-sub">App de alimentación saludable para estudiantes universitarios de Ica. Planifica, calcula y cocina mejor con los ingredientes que ya tienes.</p>
+    <div class="btns">
+      <a href="https://github.com/Jackalcito" target="_blank" class="btn-p">Ver en GitHub</a>
+      <a href="#funciones" class="btn-s">Ver funciones</a>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-n">30</div><div class="stat-l">Ingredientes<br>disponibles</div></div>
+    <div class="stat"><div class="stat-n">15</div><div class="stat-l">Recetas<br>rápidas</div></div>
+    <div class="stat"><div class="stat-n">5 min</div><div class="stat-l">Tiempo mínimo<br>de preparación</div></div>
+    <div class="stat"><div class="stat-n">S/. 52</div><div class="stat-l">Costo semanal<br>estimado</div></div>
+  </div>
+</header>
+
+<section style="background:#0A0E1A" id="funciones">
+  <div class="container">
+    <div class="s-tag">Funciones</div>
+    <h2>Todo lo que necesitas en una app</h2>
+    <p class="s-sub">Diseñada para el estudiante universitario iqueño que no tiene tiempo pero quiere comer bien.</p>
+    <div class="features">
+      <div class="feature"><div class="feat-icon">📊</div><h3>Calculadora IMC</h3><p>Calcula tu IMC con la fórmula de Harris-Benedict y te dice si necesitas volumen, definición o mantenimiento.</p></div>
+      <div class="feature"><div class="feat-icon">🥦</div><h3>Mis ingredientes</h3><p>Ingresa lo que tienes en casa y la app evalúa si tu plato tiene la proporción correcta de proteínas, carbos y grasas.</p></div>
+      <div class="feature"><div class="feat-icon">🍳</div><h3>Recetas rápidas</h3><p>Filtra recetas por tiempo disponible y método de cocción. Desde 5 minutos hasta media hora.</p></div>
+      <div class="feature"><div class="feat-icon">📅</div><h3>Plan semanal</h3><p>Batch cooking de lunes a viernes. Cocina una vez, come varios días. Ahorra tiempo y dinero.</p></div>
+      <div class="feature"><div class="feat-icon">🛒</div><h3>Lista de compras</h3><p>Lista semanal con cantidades y precios del mercado de Ica. Sabe exactamente cuánto gastarás.</p></div>
+      <div class="feature"><div class="feat-icon">📋</div><h3>Mi registro</h3><p>Historial de calorías consumidas por día. Visualiza tu evolución y mantén el control de tu dieta.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--darker)" id="tech">
+  <div class="container">
+    <div class="s-tag">Tecnologías</div>
+    <h2>Desarrollado 100% en R</h2>
+    <div class="tech-grid">
+      <div class="tech"><div class="tech-i">📦</div><div class="tech-n">R 4.5.3</div><div class="tech-d">Lenguaje base</div></div>
+      <div class="tech"><div class="tech-i">🌐</div><div class="tech-n">Shiny</div><div class="tech-d">App web interactiva</div></div>
+      <div class="tech"><div class="tech-i">📊</div><div class="tech-n">ggplot2</div><div class="tech-d">Visualización</div></div>
+      <div class="tech"><div class="tech-i">🎨</div><div class="tech-n">CSS Dark</div><div class="tech-d">Modo oscuro</div></div>
+      <div class="tech"><div class="tech-i">🗃️</div><div class="tech-n">CSV/SQLite</div><div class="tech-d">Base de datos</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#0A0E1A" id="equipo">
+  <div class="container">
+    <div class="s-tag">Equipo</div>
+    <h2>Integrantes del proyecto</h2>
+    <div class="team">
+      <div class="member"><div class="avatar">JC</div><h4>Jack Ccencho</h4><p>Desarrollo App Shiny y Análisis Estadístico</p></div>
+      <div class="member"><div class="avatar">AO</div><h4>Adrian Oviedo</h4><p>Recolección y Validación de Datos</p></div>
+      <div class="member"><div class="avatar">AL</div><h4>Avidaish Luna</h4><p>Documentación y Redacción del Informe</p></div>
+      <div class="member"><div class="avatar">JCh</div><h4>Jhanker Chaupin</h4><p>Diseño de Base de Datos</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Universidad Nacional "San Luis Gonzaga" · Facultad de Ciencias · Ica, Perú</p>
+  <p>Curso: Análisis y Diseño de Sistemas · Docente: Mag. Elmer Leonidas Landeo Alfaro · 2026</p>
+  <p>Datos: <a href="https://www.ins.gob.pe" target="_blank">MINSA/CENAN — Tablas Peruanas de Composición de Alimentos 2025</a></p>
+</footer>
+
+</body>
+</html>

@@ -183,8 +183,11 @@ server <- function(input, output, session) {
         scale_fill_manual(values=c("#457B9D","#2A9D8F","#F4A261","#E63946"))+
         scale_x_continuous(limits=c(10,42),breaks=c(18.5,25,30))+
         labs(title="Tu posición en la escala IMC",x="IMC (kg/m²)",y="",fill="")+
-        theme_minimal(base_size=12)+
-        theme(axis.text.y=element_blank(),plot.title=element_text(face="bold"),legend.position="bottom")
+        theme_dark(base_size=12)+
+        theme(axis.text.y=element_blank(),plot.title=element_text(face="bold"),
+              legend.position="bottom",
+              plot.background=element_rect(fill="#141824",color=NA),
+              panel.background=element_rect(fill="#1E2535",color=NA))
     })
   })
 
